@@ -1,0 +1,33 @@
+section {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #141d2f;
+  display: flex;
+
+  padding-top: 40px;
+  z-index: 19999;
+
+  a {
+    font-size: 26px;
+  }
+  nav {
+    display: flex;
+    gap: 40px;
+    margin-right: 100px;
+    padding-top: 20px;
+  }
+  a:hover {
+    color: #fa7902;
+  }
+  img {
+    height: 40px;
+    margin-left: 100px;
+  }
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

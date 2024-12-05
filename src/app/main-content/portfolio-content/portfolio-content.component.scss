@@ -1,0 +1,116 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    margin-top: 80px;
+    font-size: 90px;
+  }
+  span {
+    font-size: 16px;
+  }
+}
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    margin-left: 80px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: 50px;
+      margin-bottom: 30px;
+      width: 400px;
+      color: #e86f00;
+    }
+  }
+  .skills {
+    display: flex;
+    gap: 8px;
+    font-size: 24px;
+    color: #f54546;
+    margin-bottom: 30px;
+    width: 400px;
+  }
+  .discripton {
+    width: 400px;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .a-tags {
+    display: flex;
+    gap: 72px;
+    a {
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      background-color: #ff4747;
+      color: #fff;
+      font-size: 32px;
+    }
+    a:hover {
+      transition: ease-in-out;
+      transform: scale(1.1);
+      background-color: #e86f00;
+    }
+  }
+}
+.projects-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+
+  > div {
+    margin-right: 80px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: 50px;
+      margin-bottom: 30px;
+      width: 400px;
+      color: #e86f00;
+    }
+  }
+  .skills {
+    display: flex;
+    gap: 8px;
+    font-size: 24px;
+    color: #f54546;
+    margin-bottom: 30px;
+    width: 400px;
+  }
+  .discripton {
+    width: 400px;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .a-tags {
+    display: flex;
+    gap: 72px;
+    a {
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      background-color: #ff4747;
+      color: #fff;
+      font-size: 32px;
+    }
+    a:hover {
+      transition: ease-in-out;
+      transform: scale(1.1);
+      background-color: #e86f00;
+    }
+  }
+}
