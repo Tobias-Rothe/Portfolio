@@ -1,0 +1,97 @@
+<section id="Contact">
+  <div class="content">
+    <header>
+      <h2>Contact</h2>
+      <div class="separator"></div>
+    </header>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="highlight-group">
+          <div class="highlight-bar"></div>
+          <h3>Got a problem to solve?</h3>
+        </div>
+        <div class="text-content">
+          <span>
+            Contact me through this form. I am interested in hearing from you,
+            knowing your ideas, and contributing to your projects with my work.
+          </span>
+          <span>Got a problem to solve? Contact!</span>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form (submit)="onSubmit($event)">
+          <div class="input-container">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              (input)="validateField('name', nameInput.value)"
+              #nameInput
+              [class.valid]="nameValid"
+              [class.invalid]="!nameValid && nameTouched"
+              (blur)="nameTouched = true"
+            />
+            <span
+              class="icon"
+              [class.success-icon]="nameValid"
+              [class.error-icon]="!nameValid && nameTouched"
+            ></span>
+          </div>
+
+          <div class="input-container">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              (input)="validateField('email', emailInput.value)"
+              #emailInput
+              [class.valid]="emailValid"
+              [class.invalid]="!emailValid && emailTouched"
+              (blur)="emailTouched = true"
+            />
+            <span
+              class="icon"
+              [class.success-icon]="emailValid"
+              [class.error-icon]="!emailValid && emailTouched"
+            ></span>
+          </div>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            rows="5"
+          ></textarea>
+
+          <div class="privacy-policy">
+            <input
+              type="checkbox"
+              id="privacy"
+              name="privacy"
+              #privacyInput
+              [class.valid]="privacyChecked"
+              [class.invalid]="!privacyChecked && privacyTouched"
+              (change)="validateCheckbox(privacyInput.checked)"
+              (blur)="privacyTouched = true"
+            />
+            <label for="privacy">
+              I've read the <a href="#">privacy policy</a> and agree to the
+              processing of my data.
+            </label>
+            <span
+              class="icon"
+              [class.success-icon]="privacyChecked"
+              [class.error-icon]="!privacyChecked && privacyTouched"
+            ></span>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <img src="../../../assets/img/orange-shadow2.png" alt="" />
+</section>

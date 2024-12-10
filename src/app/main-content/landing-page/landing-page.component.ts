@@ -5,6 +5,8 @@ import { LetsTalkComponent } from '../lets-talk/lets-talk.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { PortfolioContentComponent } from '../portfolio-content/portfolio-content.component';
+import { ContactComponent } from '../contact/contact.component';
+import { FooterComponent } from '../../shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -16,6 +18,8 @@ import { PortfolioContentComponent } from '../portfolio-content/portfolio-conten
     AboutMeComponent,
     SkillsComponent,
     PortfolioContentComponent,
+    ContactComponent,
+    FooterComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',

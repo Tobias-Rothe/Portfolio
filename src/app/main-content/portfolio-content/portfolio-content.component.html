@@ -1,4 +1,9 @@
-<section>
+<section id="portfolio">
+  <img
+    class="purple-shadow"
+    src="../../../assets/img/orange shadow.png"
+    alt=""
+  />
   <div class="content">
     <header>
       <h2>Portfolio</h2>
@@ -7,45 +12,81 @@
         skills in action</span
       >
     </header>
-    <div class="projects">
-      <img src="../../../assets/img/join.png" alt="" />
-      <div>
-        <h3>Join</h3>
-        <div class="skills">
-          <span>HTML</span>| <span>CSS</span>| <span>Firebase</span>
+
+    <div class="projects desktop">
+      <div class="project">
+        <img src="../../../assets/img/join.png" alt="Join" />
+        <div>
+          <h3>Join</h3>
+          <div class="skills">
+            <span>HTML</span>| <span>CSS</span>| <span>Firebase</span>
+          </div>
+          <div class="discripton">
+            <span
+              >Task manager inspired by the Kanban System. Create and organize
+              tasks using drag and drop functions, assign users and
+              categories.</span
+            >
+          </div>
+          <div class="a-tags">
+            <a href="#" target="_blank">Live Test</a>
+            <a href="#" target="_blank">GitHub</a>
+          </div>
         </div>
-        <div class="discripton">
-          <span
-            >Task manager inspired by the Kanban System. Create and organize
-            tasks using drag and drop functions, assign users and
-            catergories</span
-          >
-        </div>
-        <div class="a-tags">
-          <a href="#">Live Test </a>
-          <a href="#">Github</a>
+      </div>
+      <div class="project projects-right">
+        <img src="../../../assets/img/polloloco.png" alt="El Pollo Loco" />
+        <div>
+          <h3>El Pollo Loco</h3>
+          <div class="skills">
+            <span>HTML</span>| <span>CSS</span>| <span>Firebase</span>
+          </div>
+          <div class="discripton">
+            <span
+              >A fun game where you help a chicken collect coins and avoid
+              enemies. Built with JavaScript, HTML, and CSS.</span
+            >
+          </div>
+          <div class="a-tags">
+            <a href="#" target="_blank">Live Test</a>
+            <a href="#" target="_blank">GitHub</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="projects-right">
-      <img src="../../../assets/img/polloloco.png" alt="" />
-      <div>
-        <h3>El Pollo Loco</h3>
-        <div class="skills">
-          <span>HTML</span>| <span>CSS</span>| <span>Firebase</span>
+
+    <div class="projects mobile">
+      <div class="project-item" (click)="selectProject('join')">
+        <img src="../../../assets/img/join.png" alt="Join" />
+        <div class="overlay">
+          <a href="#" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Live Test</a>
+          <div class="details">
+            <h3>Join</h3>
+            <p>
+              Task manager inspired by the Kanban System. Create and organize
+              tasks using drag and drop functions, assign users and categories.
+            </p>
+            <p><strong>Technologies:</strong> HTML, CSS, Firebase</p>
+          </div>
         </div>
-        <div class="discripton">
-          <span
-            >Task manager inspired by the Kanban System. Create and organize
-            tasks using drag and drop functions, assign users and
-            catergories</span
-          >
-        </div>
-        <div class="a-tags">
-          <a href="#">Live Test </a>
-          <a href="#">Github</a>
+      </div>
+      <div class="project-item" (click)="selectProject('polloloco')">
+        <img src="../../../assets/img/polloloco.png" alt="El Pollo Loco" />
+        <div class="overlay">
+          <a href="#" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Live Test</a>
+          <div class="details">
+            <h3>El Pollo Loco</h3>
+            <p>
+              A fun game where you help a chicken collect coins and avoid
+              enemies. Built with JavaScript, HTML, and CSS.
+            </p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <img class="red-shadow" src="../../../assets/img/red-shadow2.png" alt="" />
 </section>

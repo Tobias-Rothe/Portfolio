@@ -1,13 +1,27 @@
 <section>
   <div class="content">
     <div>
-      <img src="../../../../assets/img/Banner-3.png" alt="" />
+      <img src="../../../../assets/img/Banner-3.png" alt="Logo" />
     </div>
+
     <nav>
-      <a href="#About">About me </a>
+      <a href="#About">About me</a>
       <a href="#skills">Skills</a>
       <a href="#portfolio">Portfolio</a>
-      <button>DE/ EN</button>
+      <button>DE/EN</button>
     </nav>
+
+    <div class="burger-menu" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="mobile-nav" *ngIf="isMenuOpen">
+    <a href="#About" (click)="setActive('About')">About me</a>
+    <a href="#skills" (click)="setActive('Skills')">Skills</a>
+    <a href="#portfolio" (click)="setActive('Portfolio')">Portfolio</a>
+    <button>DE/EN</button>
   </div>
 </section>

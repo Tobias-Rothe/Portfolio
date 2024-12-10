@@ -1,6 +1,12 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins-Regular.ttf);
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -16,6 +22,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #fc4647;
 }
+
 a {
   color: white;
   text-decoration: none;
@@ -23,7 +30,8 @@ a {
 }
 body {
   margin: 0;
-  font-family: Poppins;
+  font-family: "Poppins";
+
   background-color: #141d2f;
   color: #fff;
 

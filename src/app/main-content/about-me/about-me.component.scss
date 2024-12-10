@@ -5,11 +5,12 @@ section {
   padding-left: 32px;
   box-sizing: border-box;
   color: #fff;
+  scroll-margin-top: 250px;
+}
 
-  h1 {
-    font-size: 90px;
-    margin-bottom: 75px;
-  }
+section h1 {
+  font-size: 90px;
+  margin-bottom: 75px;
 }
 
 .content {
@@ -36,15 +37,15 @@ section {
   display: flex;
   align-items: center;
   gap: 20px;
+}
 
-  img {
-    height: 38px;
-    width: 32px;
-  }
+.img-container img {
+  height: 38px;
+  width: 32px;
+}
 
-  span {
-    width: 500px;
-  }
+.img-container span {
+  width: 500px;
 }
 
 .pic {
@@ -53,23 +54,21 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
+}
 
-  .bg-shadow {
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    right: 0;
+.pic .bg-shadow {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
 
-    z-index: 1;
-  }
-
-  .pp {
-    position: absolute;
-    z-index: 2;
-
-    width: 600px;
-    object-fit: cover;
-  }
+.pic .pp {
+  position: absolute;
+  z-index: 2;
+  width: 600px;
+  object-fit: cover;
 }
 
 .bg-big {
@@ -79,4 +78,153 @@ section {
   bottom: 120px;
   left: 0;
   z-index: 1;
+}
+
+@media (max-width: 1250px) {
+  section h1 {
+    font-size: 72px;
+    margin-bottom: 50px;
+  }
+
+  .about-me-text {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .img-container span {
+    width: 400px;
+  }
+
+  .pic .bg-shadow,
+  .pic .pp {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 960px) {
+  section {
+    padding-top: 24px;
+    padding-left: 24px;
+    width: 95%;
+  }
+
+  section h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    padding: 0 18px 18px;
+  }
+
+  .about-me-text {
+    font-size: 16px;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .img-container span {
+    width: 400px;
+  }
+
+  .pic .bg-shadow,
+  .pic .pp {
+    width: 400px;
+    height: 400px;
+  }
+
+  .bg-big {
+    display: none;
+  }
+}
+
+@media (max-width: 890px) {
+  section {
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+
+  section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 0 12px 12px;
+    width: 100%;
+    margin-top: 150px;
+  }
+
+  .pic {
+    order: -1;
+    margin-bottom: 150px;
+  }
+
+  .about-me-text {
+    padding-right: 0;
+    margin-bottom: 120px;
+  }
+
+  .img-container span {
+    width: 100%;
+  }
+
+  .pic .bg-shadow,
+  .pic .pp {
+    position: absolute;
+    left: -150px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .bg-big {
+    height: 10vh;
+    bottom: 60px;
+  }
+}
+
+@media (max-width: 430px) {
+  section {
+    padding-top: 12px;
+    padding-left: 12px;
+  }
+
+  section h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .content {
+    padding: 0 8px 8px;
+    flex-direction: column;
+  }
+
+  .pic {
+    order: -1;
+    margin-bottom: 90px;
+  }
+
+  .about-me-text {
+    padding-right: 0;
+    margin-bottom: 90px;
+  }
+
+  .img-container span {
+    width: 100%;
+  }
+
+  .pic .bg-shadow,
+  .pic .pp {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 80px;
+  }
+
+  .bg-big {
+    height: 8vh;
+    bottom: 40px;
+  }
 }

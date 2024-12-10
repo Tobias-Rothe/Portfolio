@@ -4,30 +4,108 @@ section {
   left: 0;
   background-color: #141d2f;
   display: flex;
-
-  padding-top: 40px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #ff4747;
   z-index: 19999;
 
-  a {
-    font-size: 26px;
-  }
-  nav {
+  .content {
     display: flex;
-    gap: 40px;
-    margin-right: 100px;
-    padding-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+
+    img {
+      height: 40px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      a {
+        font-size: 16px;
+        color: #ffffff;
+        text-decoration: none;
+
+        &.active {
+          color: #fa7902;
+        }
+      }
+    }
+
+    .burger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+
+      span {
+        height: 4px;
+        width: 30px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        margin: 4px 0;
+      }
+    }
   }
-  a:hover {
-    color: #fa7902;
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #141d2f;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: start;
+    align-items: center;
+    button {
+      width: 60px;
+    }
+
+    a {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #ffffff;
+
+      &.active {
+        color: #fa7902;
+      }
+    }
   }
-  img {
-    height: 40px;
-    margin-left: 100px;
+
+  .navbar {
+    .language-toggle {
+      margin-left: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      color: inherit;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .active {
+      font-weight: bold;
+      color: #007bff;
+    }
   }
-}
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    .content nav {
+      display: none;
+    }
+
+    .burger-menu {
+      display: flex !important;
+    }
+
+    .mobile-nav {
+      display: flex !important;
+    }
+  }
 }
