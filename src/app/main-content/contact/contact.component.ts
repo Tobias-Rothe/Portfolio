@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ElementRef,
+  ViewChildren,
+  QueryList,
+} from '@angular/core';
+import { ScrollAnimationService } from '../../../scroll-animation.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +14,7 @@ import { Component } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
   nameValid = false;
   nameTouched = false;
 
@@ -16,6 +23,14 @@ export class ContactComponent {
 
   privacyChecked = false;
   privacyTouched = false;
+
+  @ViewChildren('animatedElement') animatedElements!: QueryList<ElementRef>;
+
+  constructor(private scrollAnimationService: ScrollAnimationService) {}
+
+  ngAfterViewInit(): void {
+    this.scrollAnimationService.observe(this.animatedElements.toArray());
+  }
 
   validateField(field: string, value: string): void {
     if (field === 'name') {

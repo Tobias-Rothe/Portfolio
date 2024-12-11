@@ -44,3 +44,23 @@ body {
   width: 100%;
   padding-bottom: 36px;
 }
+
+@keyframes slide-in-left {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(0px);
+}
+
+.slide-in-left {
+  animation: slide-in-left 1s ease-out forwards;
+}

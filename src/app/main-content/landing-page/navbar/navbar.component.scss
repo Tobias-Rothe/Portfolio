@@ -95,6 +95,59 @@ section {
     }
   }
 
+  .language-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+
+  .language-toggle input {
+    display: none;
+  }
+
+  .language-toggle .slider {
+    position: absolute;
+    background-color: #141d2f;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.4s;
+    border: 1px solid #fa7902;
+  }
+
+  .language-toggle .slider::before {
+    content: "";
+    position: absolute;
+
+    height: 22px;
+    width: 22px;
+    background-color: #ff4747;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.4s;
+  }
+
+  .language-toggle input:checked + .slider::before {
+    transform: translateX(30px);
+  }
+
+  .language-left,
+  .language-right {
+    position: relative;
+    z-index: 1999;
+    user-select: none;
+  }
+
   @media screen and (max-width: 768px) {
     .content nav {
       display: none;

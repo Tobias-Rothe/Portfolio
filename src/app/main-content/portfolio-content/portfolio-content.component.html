@@ -5,15 +5,15 @@
     alt=""
   />
   <div class="content">
-    <header>
+    <header #animatedElement class="hidden">
       <h2>Portfolio</h2>
-      <span
-        >Explore a selection of my work here - interact with projects to see my
-        skills in action</span
-      >
+      <span>
+        Explore a selection of my work here - interact with projects to see my
+        skills in action
+      </span>
     </header>
 
-    <div class="projects desktop">
+    <div #animatedElement class="projects desktop hidden">
       <div class="project">
         <img src="../../../assets/img/join.png" alt="Join" />
         <div>
@@ -22,11 +22,10 @@
             <span>HTML</span>| <span>CSS</span>| <span>Firebase</span>
           </div>
           <div class="discripton">
-            <span
-              >Task manager inspired by the Kanban System. Create and organize
-              tasks using drag and drop functions, assign users and
-              categories.</span
-            >
+            <span>
+              Task manager inspired by the Kanban System. Create and organize
+              tasks using drag and drop functions, assign users and categories.
+            </span>
           </div>
           <div class="a-tags">
             <a href="#" target="_blank">Live Test</a>
@@ -34,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="project projects-right">
+      <div #animatedElement class="project projects-right hidden">
         <img src="../../../assets/img/polloloco.png" alt="El Pollo Loco" />
         <div>
           <h3>El Pollo Loco</h3>
@@ -42,10 +41,10 @@
             <span>HTML</span>| <span>CSS</span>| <span>Firebase</span>
           </div>
           <div class="discripton">
-            <span
-              >A fun game where you help a chicken collect coins and avoid
-              enemies. Built with JavaScript, HTML, and CSS.</span
-            >
+            <span>
+              A fun game where you help a chicken collect coins and avoid
+              enemies. Built with JavaScript, HTML, and CSS.
+            </span>
           </div>
           <div class="a-tags">
             <a href="#" target="_blank">Live Test</a>
@@ -55,7 +54,7 @@
       </div>
     </div>
 
-    <div class="projects mobile">
+    <div #animatedElement class="projects mobile hidden">
       <div class="project-item" (click)="selectProject('join')">
         <img src="../../../assets/img/join.png" alt="Join" />
         <div class="overlay">

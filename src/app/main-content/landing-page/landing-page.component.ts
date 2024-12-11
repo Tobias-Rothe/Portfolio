@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LetsTalkComponent } from '../lets-talk/lets-talk.component';
-import { AboutMeComponent } from '../about-me/about-me.component';
+import { AboutComponent } from '../about-me/about-me.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { PortfolioContentComponent } from '../portfolio-content/portfolio-content.component';
 import { ContactComponent } from '../contact/contact.component';
@@ -15,7 +15,7 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
     CommonModule,
     NavbarComponent,
     LetsTalkComponent,
-    AboutMeComponent,
+    AboutComponent,
     SkillsComponent,
     PortfolioContentComponent,
     ContactComponent,

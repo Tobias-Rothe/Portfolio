@@ -13,6 +13,14 @@ export class NavbarComponent {
 
   isMenuOpen: boolean = false;
 
+  currentLanguage: string = 'DE';
+
+  toggleLanguage() {
+    this.currentLanguage = this.currentLanguage === 'DE' ? 'EN' : 'DE';
+    console.log(`Sprache geändert zu: ${this.currentLanguage}`);
+    // Hier kannst du zusätzliche Logik implementieren, z. B. Inhalte dynamisch laden.
+  }
+
   navLinks = [
     { label: 'About me', id: 'about' },
     { label: 'Skills', id: 'skills' },
