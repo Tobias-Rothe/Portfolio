@@ -1,0 +1,42 @@
+{
+  "About": {
+    "heading": "Über mich",
+    "intro": "Ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Delitzsch, Deutschland. Angetrieben von den nahezu unbegrenzten Möglichkeiten, die die IT-Welt bietet.",
+    "sections": [
+      {
+        "text": "Ich habe eine starke Leidenschaft dafür, neue Technologien zu lernen, und blühe auf, wenn es darum geht, Herausforderungen mit kreativen Lösungen zu meistern. Mit einem scharfen Blick für Details und einem Engagement für qualitativ hochwertige Arbeit suche ich kontinuierlich nach Möglichkeiten, meine Fähigkeiten zu erweitern und effektiv zu Projekten beizutragen."
+      },
+      {
+        "text": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+      }
+    ]
+  },
+  "Contact": {
+    "heading": "Kontakt",
+    "intro": "Ein Problem zu lösen?",
+    "description": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen. Ein Problem zu lösen? Kontaktieren Sie mich!",
+    "form": {
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "messagePlaceholder": "Geben Sie Ihre Nachricht ein",
+      "privacyPolicy": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten zu.",
+      "submitButton": "Nachricht senden"
+    }
+  },
+  "Portfolio": {
+    "heading": "Portfolio",
+    "intro": "Entdecken Sie eine Auswahl meiner Arbeiten hier - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "projects": [
+      {
+        "name": "Join",
+        "skills": ["HTML", "CSS", "Firebase"],
+        "description": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+      },
+      {
+        "name": "El Pollo Loco",
+
+        "description": "El Pollo Loco ist ein Spiel, in dem ein Mexikaner durch eine heiße Wüste reist, dabei Flaschen einsammelt und sich mutig gegen Hühner zur Wehr setzt."
+      }
+    ]
+  }
+}

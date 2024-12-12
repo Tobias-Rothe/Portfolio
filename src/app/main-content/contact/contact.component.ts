@@ -6,6 +6,7 @@ import {
   QueryList,
 } from '@angular/core';
 import { ScrollAnimationService } from '../../../scroll-animation.service';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-contact',
@@ -26,7 +27,10 @@ export class ContactComponent implements AfterViewInit {
 
   @ViewChildren('animatedElement') animatedElements!: QueryList<ElementRef>;
 
-  constructor(private scrollAnimationService: ScrollAnimationService) {}
+  constructor(
+    private scrollAnimationService: ScrollAnimationService,
+    public languageService: LanguageService
+  ) {}
 
   ngAfterViewInit(): void {
     this.scrollAnimationService.observe(this.animatedElements.toArray());
@@ -48,9 +52,7 @@ export class ContactComponent implements AfterViewInit {
   onSubmit(event: Event): void {
     event.preventDefault();
     if (this.nameValid && this.emailValid && this.privacyChecked) {
-      alert('Form submitted successfully!');
     } else {
-      alert('Please fill out all fields correctly.');
       this.nameTouched = true;
       this.emailTouched = true;
       this.privacyTouched = true;

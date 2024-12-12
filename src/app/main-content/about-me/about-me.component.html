@@ -1,30 +1,22 @@
 <section #animatedElement class="hidden" id="About">
   <div class="content">
     <div class="about-me-text">
-      <h1 #animatedElement class="hidden">About me</h1>
+      <h1 #animatedElement class="hidden">
+        {{ languageService.getTranslation("About.heading") }}
+      </h1>
       <span #animatedElement class="hidden">
-        I am a German-speaking Frontend Developer based in Delitzsch,<br />
-        Germany. Driven by the nearly limitless possibilities that the IT world
-        offers.
+        {{ languageService.getTranslation("About.into") }}
       </span>
       <div class="img-container">
         <img src="../../../assets/img/lamp.png" alt="" />
         <span #animatedElement class="hidden">
-          I have a strong passion for learning new technologies and thrive on
-          tackling challenges by coming up with creative solutions. With a keen
-          eye for detail and a commitment to delivering high-quality work, I
-          continuously seek opportunities to expand my skill set and contribute
-          effectively to projects.
+          {{ languageService.getTranslation("About.sections.passion") }}
         </span>
       </div>
       <div class="img-container">
         <img src="../../../assets/img/puzzle.png" alt="" />
         <span #animatedElement class="hidden">
-          In my profession, programming isn't just about writing code; it's a
-          creative form of problem-solving. I take pride in my ability to
-          distill complex technical challenges into simple, user-friendly
-          solutions. This way, I help you achieve your goals and bring your
-          visions to life.
+          {{ languageService.getTranslation("About.sections.profession") }}
         </span>
       </div>
     </div>

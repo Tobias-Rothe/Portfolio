@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../../../language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  constructor(public languageService: LanguageService) {}
   activeLink: string | null = null;
 
   isMenuOpen: boolean = false;
@@ -16,9 +18,7 @@ export class NavbarComponent {
   currentLanguage: string = 'DE';
 
   toggleLanguage() {
-    this.currentLanguage = this.currentLanguage === 'DE' ? 'EN' : 'DE';
-    console.log(`Sprache geändert zu: ${this.currentLanguage}`);
-    // Hier kannst du zusätzliche Logik implementieren, z. B. Inhalte dynamisch laden.
+    this.languageService.switchLanguage();
   }
 
   navLinks = [
