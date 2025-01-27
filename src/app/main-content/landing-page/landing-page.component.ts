@@ -7,6 +7,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { PortfolioContentComponent } from '../portfolio-content/portfolio-content.component';
 import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
+import { ImprintComponent } from '../../imprint/imprint.component';
 
 @Component({
   selector: 'app-landing-page',

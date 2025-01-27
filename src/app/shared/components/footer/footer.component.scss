@@ -1,13 +1,19 @@
 section {
-  height: 200px;
+  z-index: 19999;
+  height: 100px;
   background-color: #141d2f;
   border-top: 2px solid #ec713e;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
 
   .content {
-    font-size: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    font-size: 14px;
     font-weight: 400;
     padding-top: 5%;
     padding-left: 20px;
@@ -48,43 +54,55 @@ section {
     }
 
     .impressum {
+      display: flex;
+
+      margin-top: 5px;
+
       color: #ec713e;
-      text-align: center;
+
+      display: flex;
 
       a {
         color: inherit;
         text-decoration: none;
 
         &:hover {
-          color: #ec713e;
+          color: #ff4747;
         }
       }
     }
   }
 
   @media (max-width: 768px) {
+    height: 200px;
     flex-direction: column;
     justify-content: center;
     padding: 20px 10px;
+    margin-bottom: 20px;
 
     .content {
+      height: 200px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 10px;
 
       div {
         flex-direction: column;
-        gap: 20px;
-
+        gap: 5px;
+        a {
+          gap: 5px;
+        }
         .banner {
           order: 1;
           justify-content: center;
         }
 
         .impressum {
-          order: 2;
           font-size: 14px;
+          padding: 0;
+          gap: 0;
+          margin: 0;
         }
 
         .social {
@@ -130,11 +148,13 @@ section {
     }
   }
 
-  @media (max-width: 320px) {
-    padding: 10px 5px;
-
+  @media (max-width: 420px) {
     .content {
-      gap: 10px;
+      text-align: center;
+
+      h3 {
+        font-size: 24px;
+      }
 
       div {
         .banner {
@@ -145,14 +165,17 @@ section {
 
         .impressum {
           font-size: 10px;
+
+          > div {
+            gap: 5px;
+          }
         }
 
         .social {
           flex-direction: row;
-          gap: 8px;
 
           img {
-            height: 18px;
+            height: 24px;
           }
         }
       }

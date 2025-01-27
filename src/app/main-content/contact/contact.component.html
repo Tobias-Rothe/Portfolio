@@ -11,21 +11,23 @@
           <h3>{{ languageService.getTranslation("Contact.intro") }}</h3>
         </div>
         <div class="text-content">
-          <span>
-            {{ languageService.getTranslation("Contact.description") }}
-          </span>
-          <span>Got a problem to solve? Contact!</span>
+          <span>{{
+            languageService.getTranslation("Contact.description")
+          }}</span>
         </div>
       </div>
 
       <div class="contact-form">
-        <form (submit)="onSubmit($event)">
+        <form #ngForm="ngForm" (submit)="onSubmit(ngForm)">
           <div class="input-container">
             <input
+              [(ngModel)]="contactData.name"
               type="text"
               id="name"
               name="name"
-              placeholder="Enter your name"
+              placeholder="{{
+                languageService.getTranslation('Contact.form.namePlaceholder')
+              }}"
               (input)="validateField('name', nameInput.value)"
               #nameInput
               [class.valid]="nameValid"
@@ -37,14 +39,20 @@
               [class.success-icon]="nameValid"
               [class.error-icon]="!nameValid && nameTouched"
             ></span>
+            <div *ngIf="!nameValid && nameTouched" class="error-message">
+              {{ languageService.getTranslation("Contact.errors.names") }}
+            </div>
           </div>
 
           <div class="input-container">
             <input
+              [(ngModel)]="contactData.email"
               type="email"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="{{
+                languageService.getTranslation('Contact.form.emailPlaceholder')
+              }}"
               (input)="validateField('email', emailInput.value)"
               #emailInput
               [class.valid]="emailValid"
@@ -56,17 +64,41 @@
               [class.success-icon]="emailValid"
               [class.error-icon]="!emailValid && emailTouched"
             ></span>
+            <div *ngIf="!emailValid && emailTouched" class="error-message">
+              {{ languageService.getTranslation("Contact.errors.email") }}
+            </div>
           </div>
 
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Enter your message"
-            rows="5"
-          ></textarea>
+          <div class="input-container">
+            <textarea
+              [(ngModel)]="contactData.message"
+              id="message"
+              name="message"
+              placeholder="{{
+                languageService.getTranslation(
+                  'Contact.form.messagePlaceholder'
+                )
+              }}"
+              rows="5"
+              (input)="validateField('message', messageInput.value)"
+              #messageInput
+              [class.valid]="messageValid"
+              [class.invalid]="!messageValid && messageTouched"
+              (blur)="messageTouched = true"
+            ></textarea>
+            <span
+              class="icon"
+              [class.success-icon]="messageValid"
+              [class.error-icon]="!messageValid && messageTouched"
+            ></span>
+            <div *ngIf="!messageValid && messageTouched" class="error-message">
+              {{ languageService.getTranslation("Contact.errors.message") }}
+            </div>
+          </div>
 
           <div class="privacy-policy">
             <input
+              [(ngModel)]="contactData.privacy"
               type="checkbox"
               id="privacy"
               name="privacy"
@@ -74,23 +106,58 @@
               [class.valid]="privacyChecked"
               [class.invalid]="!privacyChecked && privacyTouched"
               (change)="validateCheckbox(privacyInput.checked)"
-              (blur)="privacyTouched = true"
             />
             <label for="privacy">
-              I've read the <a href="#">privacy policy</a> and agree to the
-              processing of my data.
+              {{
+                languageService.getTranslation(
+                  "Contact.form.privacyPolicy.firstpart"
+                )
+              }}
+              <a [routerLink]="['/privacypolicy']" fragment="top">
+                {{
+                  languageService.getTranslation(
+                    "Contact.form.privacyPolicy.link"
+                  )
+                }}
+              </a>
+              {{
+                languageService.getTranslation(
+                  "Contact.form.privacyPolicy.lastpart"
+                )
+              }}
             </label>
             <span
               class="icon"
               [class.success-icon]="privacyChecked"
               [class.error-icon]="!privacyChecked && privacyTouched"
             ></span>
+            <div
+              *ngIf="!privacyChecked && privacyTouched"
+              class="error-message position"
+            >
+              {{ languageService.getTranslation("Contact.errors.privacy") }}
+            </div>
           </div>
 
-          <button type="submit">Send Message</button>
+          <button
+            type="submit"
+            [disabled]="isSubmitting || isSubmitted"
+            (click)="onSubmit(ngForm)"
+          >
+            {{
+              isSubmitting
+                ? languageService.getTranslation("Contact.form.submitting")
+                : isSubmitted
+                ? languageService.getTranslation("Contact.form.submitted")
+                : languageService.getTranslation("Contact.form.submit")
+            }}
+          </button>
         </form>
       </div>
+      <img class="shadow-orange" src="./assets/img/orange-shadow2.png" alt="" />
     </div>
   </div>
-  <img src="../../../assets/img/orange-shadow2.png" alt="" />
+  <a href="#top">
+    <img class="up-btn" src="./assets/img/Go up button.png" alt="" />
+  </a>
 </section>

@@ -31,11 +31,10 @@ export class ScrollAnimationService {
   ): void => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        // Füge die Animation hinzu und stoppe das Beobachten
         entry.target.classList.add('slide-in-left');
         entry.target.classList.remove('hidden');
-      } else {
-        entry.target.classList.remove('slide-in-left');
-        entry.target.classList.add('hidden');
+        this.observer.unobserve(entry.target); // Beobachtung stoppen
       }
     });
   };

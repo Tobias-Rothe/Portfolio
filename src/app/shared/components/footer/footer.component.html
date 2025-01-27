@@ -2,19 +2,32 @@
   <div class="content">
     <div>
       <div class="banner">
-        <img src="../../../../assets/img/Banner-3.png" alt="Banner" />
+        <a [routerLink]="['/']" fragment="top">
+          <img src="./assets/img/Banner-3.png" alt="Logo" />
+        </a>
       </div>
       <div>
         <h3>© Tobias Rothe 2024</h3>
       </div>
       <div class="social">
-        <img src="../../../../assets/img/git.png" alt="GitHub" />
-        <img src="../../../../assets/img/mail.png" alt="Mail" />
-        <img src="../../../../assets/img/li.png" alt="LinkedIn" />
+        <a href="https://github.com/Tobias-Rothe">
+          <img src="./assets/img/git.png" alt="GitHub" />
+        </a>
+        <a href="mailto:contact@tobias-rothe.de">
+          <img src="./assets/img/mail.png" alt="Mail" />
+        </a>
+        <a href="https://www.linkedin.com/in/tobias-rothe-116629339/ ">
+          <img src="./assets/img/li.png" alt="LinkedIn" />
+        </a>
       </div>
     </div>
     <div class="impressum">
-      <a href="#">Impressum</a>
+      <a [routerLink]="['/imprint']" fragment="top">{{
+        languageService.getTranslation("privacy.imprint")
+      }}</a>
+      <a [routerLink]="['/privacypolicy']" fragment="top">{{
+        languageService.getTranslation("privacy.policy")
+      }}</a>
     </div>
   </div>
 </section>

@@ -1,16 +1,22 @@
 <section>
   <div class="content">
     <div>
-      <img src="../../../../assets/img/Banner-3.png" alt="Logo" />
+      <a [routerLink]="['/']" fragment="top">
+        <img src="./assets/img/Banner-3.png" alt="Logo" />
+      </a>
     </div>
 
     <nav>
-      <a href="#About">About me</a>
+      <a href="#About">{{ languageService.getTranslation("About.heading") }}</a>
       <a href="#skills">Skills</a>
       <a href="#portfolio">Portfolio</a>
 
       <label class="language-toggle">
-        <input type="checkbox" (change)="toggleLanguage()" />
+        <input
+          type="checkbox"
+          [checked]="languageService.getLanguage() === 'de'"
+          (change)="toggleLanguage()"
+        />
         <span class="slider">
           <span class="language-left">EN</span>
           <span class="language-right">DE</span>
@@ -26,14 +32,21 @@
   </div>
 
   <div class="mobile-nav" *ngIf="isMenuOpen">
-    <a href="#About" (click)="setActive('About')">About me</a>
+    <a href="#About" (click)="setActive('About')">{{
+      languageService.getTranslation("About.heading")
+    }}</a>
     <a href="#skills" (click)="setActive('Skills')">Skills</a>
     <a href="#portfolio" (click)="setActive('Portfolio')">Portfolio</a>
+
     <label class="language-toggle">
-      <input type="checkbox" (change)="toggleLanguage()" />
+      <input
+        type="checkbox"
+        [checked]="languageService.getLanguage() === 'de'"
+        (change)="toggleLanguage()"
+      />
       <span class="slider">
-        <span class="language-left">DE</span>
-        <span class="language-right">EN</span>
+        <span class="language-left">EN</span>
+        <span class="language-right">DE</span>
       </span>
     </label>
   </div>

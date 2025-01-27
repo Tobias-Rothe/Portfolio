@@ -5,7 +5,7 @@ section {
   padding-left: 32px;
   box-sizing: border-box;
   color: #fff;
-  scroll-margin-top: 150px;
+  scroll-margin-top: 230px;
 }
 
 section h1 {
@@ -29,7 +29,6 @@ section h1 {
   z-index: 2;
   text-align: left;
   padding-right: 50px;
-  text-align: justify;
 }
 
 .img-container {
@@ -57,17 +56,19 @@ section h1 {
 }
 
 .pic .bg-shadow {
-  width: 600px;
-  height: 600px;
+  width: auto;
+  height: 700px;
   position: absolute;
-  right: 0;
+  right: -51px;
   z-index: 1;
 }
 
 .pic .pp {
   position: absolute;
-  z-index: 2;
-  width: 600px;
+  z-index: 1;
+  width: auto;
+  height: 700px;
+  right: 132px;
   object-fit: cover;
 }
 
@@ -95,10 +96,9 @@ section h1 {
     width: 400px;
   }
 
-  .pic .bg-shadow,
-  .pic .pp {
-    width: 500px;
-    height: 500px;
+  .pic .pic .pp {
+    width: auto;
+    height: 700px;
   }
 }
 
@@ -128,10 +128,16 @@ section h1 {
     width: 400px;
   }
 
-  .pic .bg-shadow,
+  .pic,
   .pic .pp {
-    width: 400px;
-    height: 400px;
+    top: 41px;
+    width: auto;
+    height: 350px;
+  }
+  .bg-shadow {
+    top: 0;
+    width: auto;
+    height: 600px;
   }
 
   .bg-big {
@@ -155,29 +161,46 @@ section h1 {
     flex-direction: column;
     padding: 0 12px 12px;
     width: 100%;
-    margin-top: 150px;
+    margin-top: 100px;
   }
 
   .pic {
     order: -1;
-    margin-bottom: 150px;
+
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+
+  .pic .bg-shadow {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    top: -67px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .pic .pp {
+    position: relative;
+    left: -3px;
+    top: -33px;
+    transform: none;
+    z-index: 2;
+    width: auto;
+    height: 400px;
+    object-fit: cover;
   }
 
   .about-me-text {
     padding-right: 0;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .img-container span {
     width: 100%;
-  }
-
-  .pic .bg-shadow,
-  .pic .pp {
-    position: absolute;
-    left: -150px;
-    width: 300px;
-    height: 300px;
   }
 
   .bg-big {
@@ -188,6 +211,7 @@ section h1 {
 
 @media (max-width: 430px) {
   section {
+    overflow: hidden;
     padding-top: 12px;
     padding-left: 12px;
   }
@@ -204,7 +228,8 @@ section h1 {
 
   .pic {
     order: -1;
-    margin-bottom: 90px;
+    margin-bottom: 0px;
+    left: -3px;
   }
 
   .about-me-text {
@@ -216,11 +241,14 @@ section h1 {
     width: 100%;
   }
 
-  .pic .bg-shadow,
-  .pic .pp {
-    width: 300px;
+  .pic .pic .pp {
+    width: auto;
     height: 300px;
-    margin-bottom: 80px;
+    left: 21px;
+  }
+  .bg-shadow {
+    width: 400px;
+    height: 400px;
   }
 
   .bg-big {

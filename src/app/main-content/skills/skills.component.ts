@@ -6,6 +6,7 @@ import {
   QueryList,
 } from '@angular/core';
 import { ScrollAnimationService } from '../../../scroll-animation.service';
+import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-skills',
@@ -17,7 +18,10 @@ import { ScrollAnimationService } from '../../../scroll-animation.service';
 export class SkillsComponent implements AfterViewInit {
   @ViewChildren('animatedElement') animatedElements!: QueryList<ElementRef>;
 
-  constructor(private scrollAnimationService: ScrollAnimationService) {}
+  constructor(
+    private scrollAnimationService: ScrollAnimationService,
+    public languageService: LanguageService
+  ) {}
 
   ngAfterViewInit(): void {
     this.scrollAnimationService.observe(this.animatedElements.toArray());

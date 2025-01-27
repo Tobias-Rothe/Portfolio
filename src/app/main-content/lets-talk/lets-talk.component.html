@@ -1,4 +1,4 @@
-<img class="red-shadow" src="../../../assets/img/red-shadow.png" alt="" />
+<img class="red-shadow" src="./assets/img/red-shadow.png" alt="" />
 <section>
   <div #animatedElement class="hidden">
     <span>I am</span>
@@ -7,14 +7,21 @@
       <h2>FRONTEND DEVELOPER</h2>
     </div>
   </div>
-  <div><a href="#Contact"> Let`s talk!</a></div>
+  <div>
+    <a href="#Contact"> {{ languageService.getTranslation("talk.btn") }}</a>
+  </div>
 
   <footer>
     <div class="orange-line"></div>
-    <img src="../../../assets/img/git.png" alt="" /><img
-      src="../../../assets/img/mail.png"
-      alt=""
-    /><img src="../../../assets/img/li.png" alt="" />
+    <a href="https://github.com/Tobias-Rothe">
+      <img src="./assets/img/git.png" alt="" />
+    </a>
+    <a href=" mailto:contact@tobias-rothe.de">
+      <img class="mailto" src="./assets/img/mail.png" alt="" />
+    </a>
+    <a href="https://www.linkedin.com/in/tobias-rothe-116629339/">
+      <img src="./assets/img/li.png" alt="" />
+    </a>
   </footer>
 </section>
-<img class="purple-shadow" src="../../../assets/img/orange shadow.png" alt="" />
+<img class="purple-shadow" src="./assets/img/orange shadow.png" alt="" />
