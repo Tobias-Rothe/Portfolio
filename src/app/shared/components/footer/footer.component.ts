@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ImprintComponent } from '../../../imprint/imprint.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { LanguageService } from '../../../language.service';
 
 @Component({
@@ -11,5 +10,18 @@ import { LanguageService } from '../../../language.service';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  constructor(public languageService: LanguageService) {}
+  constructor(
+    public languageService: LanguageService,
+    private router: Router
+  ) {}
+
+  scrollToTop(): void {
+    if (this.router.url === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      this.router.navigate(['/']).then(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  }
 }

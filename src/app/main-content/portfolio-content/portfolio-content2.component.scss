@@ -43,8 +43,8 @@ section {
   @media (min-width: 1301px) {
     .projects.desktop {
       justify-content: center;
-      align-items: center;
-      gap: 80px;
+      align-items: flex-start;
+      gap: 40px;
 
       .skills {
         display: block;

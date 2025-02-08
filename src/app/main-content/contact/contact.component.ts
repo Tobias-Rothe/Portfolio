@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { FormsModule, NgModel } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -46,6 +47,7 @@ export class ContactComponent implements AfterViewInit {
   isSubmitted = false;
 
   constructor(
+    private router: Router,
     private scrollAnimationService: ScrollAnimationService,
     public languageService: LanguageService,
     private http: HttpClient
@@ -145,5 +147,15 @@ export class ContactComponent implements AfterViewInit {
     this.nameValid = false;
     this.emailValid = false;
     this.messageValid = false;
+  }
+
+  scrollToTop(): void {
+    if (this.router.url === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      this.router.navigate(['/']).then(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   }
 }

@@ -125,13 +125,13 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5px;
+    padding: 14px 5px;
     box-sizing: border-box;
     font-size: 14px;
     font-weight: bold;
     color: white;
     transition: background-color 0.4s;
-    border: 1px solid #fa7902;
+    border: 2px solid #fa7902;
   }
 
   .language-toggle .slider::before {

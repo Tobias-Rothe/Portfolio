@@ -28,12 +28,4 @@ export class PortfolioContentComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.scrollAnimationService.observe(this.animatedElements.toArray());
   }
-
-  selectProject(project: string): void {
-    this.selectedProject = project;
-    document.body.style.backgroundImage =
-      project === 'join'
-        ? "url('./../../../assets/img/join-bg.png')"
-        : "url('./../../../assets/img/polloloco-bg.png')";
-  }
 }
